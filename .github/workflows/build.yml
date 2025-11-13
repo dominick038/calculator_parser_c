@@ -16,6 +16,9 @@ jobs:
     - name: Compile build tool
       run: cc build.c -o build
 
+    - name: Create bin directory
+      run: mkdir -p ./bin
+
     - name: Run build
       run: ./build
 
