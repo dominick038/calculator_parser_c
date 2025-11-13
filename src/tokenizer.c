@@ -116,6 +116,15 @@ Token tokenizer_next(Tokenizer* tok)
     return eof;
 }
 
+void token_free(Token tok)
+{
+    if (tok.type == TOKEN_NUMBER && tok.lexeme)
+    {
+        free(tok.lexeme);
+        tok.lexeme = NULL;
+    }
+}
+
 void tokenizer_free(Tokenizer* tok) 
 {
     free(tok);

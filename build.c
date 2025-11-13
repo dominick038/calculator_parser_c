@@ -4,7 +4,9 @@
 int main(int argc, char** argv) {
     GO_REBUILD_URSELF(argc, argv);
     
-    CMD("gcc", "-Wall", "-Wextra", "-g",
+    CMD("gcc", "-fsanitize=address", 
+        "-g", "-fno-omit-frame-pointer",
+        "-Wall", "-Wextra", "-g",
         "-I./headers",
         "src/main.c", "src/tokenizer.c",
         "-o", "./bin/calculator_parser_c", NULL);

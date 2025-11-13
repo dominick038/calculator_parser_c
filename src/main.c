@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "tokenizer.h"
 
@@ -7,7 +6,8 @@ int main() {
     
     Token token;
     while ((token = tokenizer_next(tokenizer)).type != TOKEN_EOF) {
-       printf("%s \n", token.lexeme ? token.lexeme : "NULL"); 
+        printf("%s \n", token.lexeme ? token.lexeme : "NULL"); 
+        token_free(token);
     } 
 
     tokenizer_free(tokenizer);

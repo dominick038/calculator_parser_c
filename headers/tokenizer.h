@@ -25,6 +25,8 @@ Tokenizer* tokenizer_create(const char* input, size_t length);
 
 Token tokenizer_next(Tokenizer* tok);
 
+void token_free(Token tok);
+
 void tokenizer_free(Tokenizer* tok);
 
 #endif
