@@ -1,0 +1,13 @@
+#define NOBUILD_IMPLEMENTATION
+#include "nobuild.h"
+
+int main(int argc, char** argv) {
+    GO_REBUILD_URSELF(argc, argv);
+    
+    CMD("gcc", "-Wall", "-Wextra", "-g",
+        "-I./headers",
+        "src/main.c", "src/tokenizer.c",
+        "-o", "./bin/calculator_parser_c", NULL);
+    
+    return 0;
+}
