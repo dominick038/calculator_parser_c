@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Compile build tool
+      run: cc build.c -o build
+
+    - name: Run build
+      run: ./build
+
+    - name: Clean up build tool
+      run: rm ./build
+
+    - name: Run calculator_parser_c
+      run: ./bin/calculator_parser_c
