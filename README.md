@@ -1,0 +1,3 @@
+# A parser and tokenizer written in C using the shunting yard algorithm
+
+Yep. thats about all there is to it....
