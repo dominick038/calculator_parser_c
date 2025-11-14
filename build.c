@@ -10,6 +10,7 @@ int main(int argc, char** argv) {
         "-I./headers",
         "src/main.c", "src/tokenizer.c",
         "src/token_stack.c", "src/token_queue.c",
+        "src/parser.c",
         "-o", "./bin/calculator_parser_c", NULL);
     
     return 0;

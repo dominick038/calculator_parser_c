@@ -5,6 +5,7 @@
 
 typedef struct Tokenizer Tokenizer;
 
+#define TOKEN_COUNT 7
 typedef enum {
     TOKEN_NUMBER,
     TOKEN_PLUS,
