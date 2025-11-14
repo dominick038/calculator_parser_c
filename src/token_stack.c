@@ -66,6 +66,11 @@ int token_stack_peek(TokenStack *tokstk, Token* tokout)
     return 0;
 }
 
+bool token_stack_is_empty(TokenStack* tokstk)
+{
+    return tokstk->top == 0;
+}
+
 void token_stack_free(TokenStack* tokstk)
 {
     if (!tokstk) return;

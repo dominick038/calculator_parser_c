@@ -3,6 +3,6 @@
 
 #include "tokenizer.h"
 
-const char* parser_evalutate(Tokenizer* tokenizer);
+const char* parser_evaluate(Tokenizer* tokenizer);
 
 #endif
